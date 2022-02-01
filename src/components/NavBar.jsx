@@ -14,7 +14,7 @@ function NavBar() {
               <a className="nav-link active" aria-current="page" href="#">Home</a>
               <a className="nav-link" href="#">Features</a>
               <a className="nav-link" href="#">Pricing</a>
-              <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
             </div>
           </div>
         </div>
