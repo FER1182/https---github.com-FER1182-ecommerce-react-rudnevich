@@ -5,7 +5,7 @@ import Carrito from '../images/shopping-cart.png';
 
 const styleMenu={
     fontSize : 40
-    textAlign : 'center',
+    
 }
 
 const Menu = () => {
