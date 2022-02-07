@@ -1,28 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import Prueba from './components/Prueba';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from './components/Carousel';
+import Menu from './components/Menu';
+
 
 function App() {
 
 
+  return (<div className="App" >
+
+
+    <Menu />
+    <Carousel />
 
 
 
 
-
- let titulo = "Bienvenido a la tienda"//esto lo pongo abajo entre llaves para que me tome la variable
-
-
-  return ( 
-    <div className = "App" >
-
-        <h1>{titulo}</h1>
-  <NavBar/>
-  
-  
- 
   </div>
   );
 }
