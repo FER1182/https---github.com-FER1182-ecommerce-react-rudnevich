@@ -6,6 +6,7 @@ import Prueba from './components/Prueba';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from './components/Carousel';
 import Menu from './components/Menu';
+import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
     <Menu />
     <Carousel />
-
+    <ItemListContainer greeting="aca van los articulos" />
 
 
 
