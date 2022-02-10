@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemListContainer = ({ greeting }) => {
 
-    const data = [{ id: "tr1000", name: "camisa", descripcion: "camisa con tachas", stock: 10 }];
+/*     const data = [{ id: "tr1000", name: "camisa", descripcion: "camisa con tachas", stock: 10 }];
 
     const tarea = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -16,11 +16,7 @@ const ItemListContainer = ({ greeting }) => {
     }).catch(err => {
         console.log(err);
     })
-
-    console.log(tarea);
-
-  
-
+    console.log(tarea); */
 
     return <div>
 
