@@ -17,7 +17,7 @@ function App() {
 
 
     <Menu/> 
-    <ItemCount stock={20} initial={1} />
+    <ItemCount stock={25} initial={1} />
     {/* <Carousel /> */ } 
     {/*  <ItemListContainer greeting="aca van los articulos" />*/ } 
     {/*  <Prueba /> */ }

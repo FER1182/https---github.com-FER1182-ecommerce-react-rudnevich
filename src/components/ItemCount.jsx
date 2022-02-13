@@ -24,11 +24,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     {/* <input type="text" className="form-control" value={contador} aria-label="Last name" /> */}
                   </div>
                   <div class="col">
-                    <button onClick={onAdd}> +</button>
+                    <button 	disabled={ contador === stock ? true : false }  onClick={onAdd}> +</button>
                   </div>
                 </div>
   
-                {contador <stock && <button class="btn btn-success">Agregar a Carrito</button>}
+                <button class="btn btn-success">Agregar a Carrito</button>
               </div>
             </div>
           </div>
