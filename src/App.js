@@ -7,19 +7,21 @@ import Carousel from './components/Carousel';
 import Menu from './components/Menu';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
-
+import Item from './components/Item';
 
 
 function App() {
 
-
+  const item =[{id:'29408', title:"camisa de lana", price:1000, pictureUrl:"../images/29919.jpg"}]
   return ( <div className = "App" >
 
 
-    <Menu/> 
-    <ItemCount stock={25} initial={1} />
+    <Menu/>
+   {/*  <Item item="item"/> */}
+     
+    {/* <ItemCount stock={25} initial={1} /> */}
     {/* <Carousel /> */ } 
-    {/*  <ItemListContainer greeting="aca van los articulos" />*/ } 
+    <ItemListContainer  />  
     {/*  <Prueba /> */ }
 
     </div>
