@@ -12,7 +12,7 @@ import Item from './components/Item';
 
 function App() {
 
-  const item =[{id:'29408', title:"camisa de lana", price:1000, pictureUrl:"../images/29919.jpg"}]
+
   return ( <div className = "App" >
 
 
