@@ -40,8 +40,7 @@ useEffect(() => {
     
  
     return ( <div>
-        <ItemList items={items} />
-         
+        <ItemList datos={items} />
     </div>
     );
 };

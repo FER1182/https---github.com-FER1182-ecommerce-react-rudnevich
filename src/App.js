@@ -18,11 +18,11 @@ function App() {
    {/*<Rutas/>*/}
    
     <Menu/>
-    <ItemCount stock={25} initial={1} /> 
+    {/* <ItemCount stock={25} initial={1} /> */} 
       
    {/*  <Item item="item"/> */}
    {/* <Carousel /> */ } 
-   {/* <ItemListContainer  /> */}
+    <ItemListContainer  />
    {/*  <Prueba /> */ }
 
     </div>
