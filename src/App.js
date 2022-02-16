@@ -8,21 +8,22 @@ import Menu from './components/Menu';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 import Item from './components/Item';
-
+import Rutas from './routes';
 
 function App() {
-
+     
 
   return ( <div className = "App" >
 
-
+   {/*<Rutas/>*/}
+   
     <Menu/>
+    <ItemCount stock={25} initial={1} /> 
+      
    {/*  <Item item="item"/> */}
-     
-    {/* <ItemCount stock={25} initial={1} /> */}
-    {/* <Carousel /> */ } 
-    <ItemListContainer  />  
-    {/*  <Prueba /> */ }
+   {/* <Carousel /> */ } 
+   {/* <ItemListContainer  /> */}
+   {/*  <Prueba /> */ }
 
     </div>
   );

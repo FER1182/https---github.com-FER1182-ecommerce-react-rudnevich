@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import foto3 from '../images/29919.jpg'
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial }) => {
 
   const [contador, setContador] = useState(initial);
+  const onAdd = () => setContador(contador + 1); 
 
-  onAdd = () => setContador(contador + 1);
   return <>
     <div class="row justify-content-md-center">
       <div className="col-3">

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import ItemList from './ItemList';
 import foto1 from '../images/28911.jpg'
 import foto2 from '../images/29917.jpg'
 import foto3 from '../images/29919.jpg'
 
 const ItemListContainer = () => {
-
-        const productos = [
+const productos = [
             { id: "29950", 
               title: "camisa", 
               price: 1500, 
@@ -23,25 +22,28 @@ const ItemListContainer = () => {
               pictureUrl: foto3
             }
 ];
-    
-        const tarea = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 2000);
-    
-        })
-    
-        tarea.then((result) => {
-            console.log(result);
-        }).catch(err => {
-            console.log(err);
-        })
-        console.log(tarea); 
-        
-    return <div>
-        <ItemList items={productos} />
 
-    </div>;
+
+const [items,setItems]=useState([]);
+
+useEffect(() => {
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+             resolve(productos)
+         }, 2000);
+        }).then((res) => setItems(res));    
+
+  return () => {
+    setItems([])
+  };
+}, []);
+    
+ 
+    return ( <div>
+        <ItemList items={items} />
+         
+    </div>
+    );
 };
 
 export default ItemListContainer;
