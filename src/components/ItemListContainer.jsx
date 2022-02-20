@@ -16,7 +16,7 @@ const productos = [
               price: 1200, 
               pictureUrl: foto2
             },
-            { id: "29950", 
+            { id: "29951", 
               title: "camisa sin manga", 
               price: 1800, 
               pictureUrl: foto3
@@ -40,7 +40,8 @@ useEffect(() => {
     
  
     return ( <div>
-        <ItemList datos={items} />
+        {console.log("hola")}
+        <ItemList datos={items} /> 
     </div>
     );
 };

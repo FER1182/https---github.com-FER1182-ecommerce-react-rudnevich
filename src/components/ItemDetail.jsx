@@ -5,6 +5,7 @@ const ItemDetail = ({datos}) => {
     
     return (
         <div className="row justify-content-md-center">
+            {console.log(datos)}
             <div className="col-3">
                 <div className="card">
                     <img src={datos.fotoUrl} className="card-img-top" alt="..." />
