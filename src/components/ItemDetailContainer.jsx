@@ -3,7 +3,7 @@ import foto1 from '../images/28911.jpg';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = (producto) => {
 
     const params = useParams()
 
@@ -14,6 +14,8 @@ const ItemDetailContainer = () => {
             price: 1500,
             description: "camisa manga larga con puntilla y volado",
             fotoUrl: foto1,
+            stock: 20,
+
         },
 
     ];
@@ -35,9 +37,8 @@ const ItemDetailContainer = () => {
 
     return (
         <div >
-            <h1>{params.id}</h1>
-            {console.log(detail)}
-            <ItemDetail datos={detail} />
+
+            <ItemDetail datos={detail} art={params.id} />
         </div>
     )
 }
