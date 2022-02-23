@@ -3,6 +3,8 @@ import foto1 from '../images/28911.jpg';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 
+
+
 const ItemDetailContainer = (producto) => {
 
     const params = useParams()

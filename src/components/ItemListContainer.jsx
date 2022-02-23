@@ -65,7 +65,7 @@ const productos = [
             },
 ];
 
-const params = useParams()
+const categoryId = useParams()
 
 
 const [items,setItems]=useState([]);
@@ -74,17 +74,27 @@ useEffect(() => {
     new Promise((resolve, reject) => {
         setTimeout(() => {
              resolve(productos)
-         }, 2000);
-        }).then((res) => setItems(res));    
-
+             console.log(categoryId.id);
+         }, 1000);
+        }).then((res) =>  {
+          if(categoryId.id){
+            const categoriaProductos = res.filter(
+              (items) => items.categoria === categoryId.id
+            );
+            return setItems(categoriaProductos);
+          }
+           return setItems(res)
+        });    
+        
   return () => {
     setItems([])
   };
-}, []);
-    
- 
+}, [categoryId]);
+  
+
+
     return ( <div>
-        <h1>{params.id}</h1>
+      
         <ItemList datos={items} /> 
     </div>
     );
