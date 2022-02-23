@@ -74,7 +74,7 @@ useEffect(() => {
     new Promise((resolve, reject) => {
         setTimeout(() => {
              resolve(productos)
-             console.log(categoryId.id);
+             
          }, 1000);
         }).then((res) =>  {
           if(categoryId.id){
