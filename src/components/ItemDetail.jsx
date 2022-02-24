@@ -9,9 +9,9 @@ const ItemDetail = ({ datos, art }) => {
     const [visible, setVisible] = useState(true)
 
     const agregarCompra = () => {
-        console.log(visible);
-        //setVisible = false;
-        console.log(visible);
+       
+        setVisible(false);
+        
     }
 
     return (
@@ -29,7 +29,7 @@ const ItemDetail = ({ datos, art }) => {
                         </div>
                     
                     </div>
-                    {visible && <ItemCount stock={datos.stock} initial={1} agregarCompra={agregarCompra()} />}
+                    {visible && <ItemCount stock={datos.stock} initial={1} agregarCompra={agregarCompra} />}
                 </div>
             </div>
         </div>
