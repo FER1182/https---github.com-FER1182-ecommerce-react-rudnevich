@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, agregarCompra }) => {
 
+  
   const [contador, setContador] = useState(initial);
   const onAdd = () => setContador(contador + 1);
-  //const agregarCompra =()=> 
-
+  
+  
   return <>
     <div className="container">
       <div className="row">
@@ -22,7 +23,7 @@ const ItemCount = ({ stock, initial }) => {
           <button disabled={contador === stock ? true : false} onClick={onAdd}> +</button>
         </div>
 
-        <button className="btn btn-success">Agregar a Carrito</button>
+        <button onClick={agregarCompra()} className="btn btn-success">Agregar a Carrito</button>
       </div>
     </div>
 

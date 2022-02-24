@@ -1,16 +1,25 @@
-import React from 'react'
-import ItemDetailContainer from './ItemDetailContainer';
-import ItemCount from   './ItemCount';
+import React, { useState } from 'react'
 
-const ItemDetail = ({datos ,art}) => {
-   
-    
+import ItemDetailContainer from './ItemDetailContainer';
+import ItemCount from './ItemCount';
+
+const ItemDetail = ({ datos, art }) => {
+
+
+    const [visible, setVisible] = useState(true)
+
+    const agregarCompra = () => {
+        console.log(visible);
+        //setVisible = false;
+        console.log(visible);
+    }
+
     return (
         <div className="row justify-content-md-center">
-            
+
             <div className="col-3">
                 <div className="card">
-                    <img src={datos.fotoUrl} className="card-img-top" alt="..."/>
+                    <img src={datos.fotoUrl} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h6 className="card-title">art.{art}</h6>
                         <h6 className="card-title">{datos.title}</h6>
@@ -18,9 +27,9 @@ const ItemDetail = ({datos ,art}) => {
                         <div className="container">
                             <p>{datos.description}</p>
                         </div>
-
+                    
                     </div>
-                    <ItemCount stock={datos.stock} initial={1}/>
+                    {visible && <ItemCount stock={datos.stock} initial={1} agregarCompra={agregarCompra()} />}
                 </div>
             </div>
         </div>

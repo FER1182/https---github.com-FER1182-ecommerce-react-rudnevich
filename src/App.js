@@ -3,15 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './components/Menu/Menu'
 import Rutas from './routes'
 import CarritoProvedor from './components/Context/CarritoProvedor';
-import Prueba21feb from './components/clasesPrueba/Prueba21feb';
+import Prueba23feb from './components/clasesPrueba/Prueba23feb';
 
 function App() {
      
 
   return ( <div className = "App" >
   <CarritoProvedor>
-      {/* <Prueba21feb/> */}
-      <Rutas/> {/* este seria un hijo y todo lo de adentro tambien */}
+      {/* <Prueba23feb/> */}
+      <Rutas/>  {/* este seria un hijo y todo lo de adentro tambien */}
   </CarritoProvedor>
     </div>
   );
