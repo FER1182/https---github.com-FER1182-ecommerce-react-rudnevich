@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import { CarritoContext } from './Context/CarritoProvedor';
 
-
-const ItemCount = ({ stock, initial, agregarCompra }) => {
+const ItemCount = ({ item,stock, initial}) => {
 
   
   const [contador, setContador] = useState(initial);
+  const {agregarAlCarrito,estaEnCarrito} = useContext(CarritoContext);
+
   const onAdd = () => setContador(contador + 1);
   
   
@@ -23,7 +25,7 @@ const ItemCount = ({ stock, initial, agregarCompra }) => {
           <button disabled={contador === stock ? true : false} onClick={onAdd}> +</button>
         </div>
 
-        <button onClick={agregarCompra} className="btn btn-success">Agregar a Carrito</button>
+        <button disabled={()=>estaEnCarrito(item)} onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button>
       </div>
     </div>
 

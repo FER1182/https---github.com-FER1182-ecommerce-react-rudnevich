@@ -19,7 +19,8 @@ const ItemDetail = ({ datos, art }) => {
 
             <div className="col-3">
                 <div className="card">
-                    <img src={datos.fotoUrl} className="card-img-top" alt="..." />
+                    <img src={datos.fotoUrl} className="card-img-top" style={{ height: 200  ,
+ width: 200}} alt="..." />
                     <div className="card-body">
                         <h6 className="card-title">art.{art}</h6>
                         <h6 className="card-title">{datos.title}</h6>
@@ -29,7 +30,7 @@ const ItemDetail = ({ datos, art }) => {
                         </div>
                     
                     </div>
-                    {visible && <ItemCount stock={datos.stock} initial={1} agregarCompra={agregarCompra} />}
+                    {visible && <ItemCount item={{datos}} stock={datos.stock} initial={1} agregarCompra={agregarCompra} />}
                 </div>
             </div>
         </div>

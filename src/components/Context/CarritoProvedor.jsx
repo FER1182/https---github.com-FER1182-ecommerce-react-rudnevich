@@ -7,24 +7,33 @@ export const CarritoContext = createContext([]);
 const CarritoProvedor = ({children}) => {
 
 //funciones
-const dameUnaAlerta=(texto) =>{
-    alert (texto);
+
+const agregarAlCarrito = (item,cantidad) => {
+
+    let itemConQ =[item,cantidad]
+    setCarrito([...carrito,itemConQ])
+   
 }
 
-const agregarAlCarrito = (item) => {
-    setCarrito([...carrito,item])
+const eliminarDelCarrito = (itemId)=>{
+    
 }
+
+const vaciarCarrito = () =>{
+    setCarrito([]);
+}
+
+const estaEnCarrito = (item) =>{
+    return carrito.some((a)=> a.id === item.id)
+}
+
 
 //variables
-
- let nombre="fernando"
- let apellido="rudnevich"
- let edad=39
-
 
 
 //estados
 const [carrito,setCarrito]=useState([]);
+console.log(carrito)
 
  
  
@@ -34,8 +43,8 @@ const [carrito,setCarrito]=useState([]);
 
 //en clase del 21 febrero  
     return (
-    <CarritoContext.Provider value={{nombre,apellido,edad,dameUnaAlerta,agregarAlCarrito,carrito}}>
-        {children}
+    <CarritoContext.Provider value={{agregarAlCarrito,carrito,vaciarCarrito,estaEnCarrito}}>
+        {children} {/* a quein provees la info */}
     </CarritoContext.Provider>
   )
 }

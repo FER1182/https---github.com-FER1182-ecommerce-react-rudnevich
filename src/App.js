@@ -9,11 +9,10 @@ function App() {
      
 
   return ( <div className = "App" >
-  <CarritoProvedor>
-      {/* <Prueba23feb/> */}
-      <Rutas/>  {/* este seria un hijo y todo lo de adentro tambien */}
-  </CarritoProvedor>
-    </div>
+            <CarritoProvedor>
+              <Rutas/>  {/* este seria un hijo y todo lo de adentro tambien */}
+            </CarritoProvedor>
+          </div>
   );
 }
 
