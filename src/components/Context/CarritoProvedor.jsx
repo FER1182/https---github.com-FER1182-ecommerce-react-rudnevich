@@ -16,7 +16,8 @@ const agregarAlCarrito = (item,cantidad) => {
 }
 
 const eliminarDelCarrito = (itemId)=>{
-    
+    let newCarrito= carrito.filter((a)=> a.id !== itemId)
+    setCarrito=[newCarrito];
 }
 
 const vaciarCarrito = () =>{
@@ -43,8 +44,9 @@ console.log(carrito)
 
 //en clase del 21 febrero  
     return (
-    <CarritoContext.Provider value={{agregarAlCarrito,carrito,vaciarCarrito,estaEnCarrito}}>
+    <CarritoContext.Provider value={{agregarAlCarrito,carrito,vaciarCarrito,estaEnCarrito,eliminarDelCarrito}}>
         {children} {/* a quein provees la info */}
+        
     </CarritoContext.Provider>
   )
 }

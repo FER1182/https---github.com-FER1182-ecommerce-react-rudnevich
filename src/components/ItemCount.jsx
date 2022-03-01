@@ -8,7 +8,7 @@ const ItemCount = ({ item,stock, initial}) => {
   const {agregarAlCarrito,estaEnCarrito} = useContext(CarritoContext);
 
   const onAdd = () => setContador(contador + 1);
-  
+
   
   return <>
     <div className="container">
@@ -25,7 +25,7 @@ const ItemCount = ({ item,stock, initial}) => {
           <button disabled={contador === stock ? true : false} onClick={onAdd}> +</button>
         </div>
 
-        <button disabled={()=>estaEnCarrito(item)} onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button>
+        <button  disabled={estaEnCarrito(item)}  onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button>
       </div>
     </div>
 
