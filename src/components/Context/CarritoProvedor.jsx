@@ -10,9 +10,15 @@ const CarritoProvedor = ({children}) => {
 
 const agregarAlCarrito = (item,cantidad) => {
 
-    let itemConQ =[item,cantidad]
+    console.log(carrito)
+    let itemConQ ={
+        itemDetalle:item,
+        cantidad:cantidad}
+
+        
+    console.log(itemConQ)
     setCarrito([...carrito,itemConQ])
-   
+    
 }
 
 const eliminarDelCarrito = (itemId)=>{
@@ -34,7 +40,7 @@ const estaEnCarrito = (item) =>{
 
 //estados
 const [carrito,setCarrito]=useState([]);
-console.log(carrito)
+
 
  
  
