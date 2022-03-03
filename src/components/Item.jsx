@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
 
-    
     return (
         <div className="col-3">
             <div className="card">

@@ -1,46 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext} from 'react';
 import foto1 from '../images/28911.jpg';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-
+import { CarritoContext } from './Context/CarritoProvedor';
 
 
 const ItemDetailContainer = (producto) => {
-
+    const {productos} = useContext(CarritoContext);
+        console.log(productos)
     const params = useParams()
+ 
 
-    const detalle = [
-        {
-            id: "29950",
-            title: "camisa",
-            price: 1500,
-            description: "camisa manga larga con puntilla y volado",
-            fotoUrl: foto1,
-            stock: 20,
-
-        },
-
-    ];
-
-
-    const [detail, setDetail] = useState([]);
+/*      const [detail, setDetail] = useState([]);
+     
+     console.log(detail)
 
     useEffect(() => {
         new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(detalle[0])
+                resolve(productos)
             }, 1000);
         }).then((resp) => setDetail(resp));
         return () => {
-            setDetail([])
+              setDetail([]) 
         };
-    }, []);
-
-
+    }, []); */
+    
+    
     return (
         <div >
 
-            <ItemDetail datos={detail} art={params.id} />
+         { <ItemDetail datos={productos} art={params.id} /> }  
         </div>
     )
 }

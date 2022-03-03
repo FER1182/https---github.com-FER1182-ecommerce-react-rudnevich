@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import React from 'react'
-import { colelection, getDocs } from 'firebase/firebase'
+import { collection, getDocs } from 'firebase/firebase'
 import db from '../../service/firebase'
-import { collection } from 'firebase/firestore'
+
 
 const Prueba28feb = () => {
 
     const getData = async () => {
         try {
-            const data = collection(db, "items");
+            const data = collection(db, "items");//base de datos, y cual coleccion
             const col = await getDocs(data);
             const result = col.docs.map((doc) => (doc = { id: doc.id, ...doc.data() })
             );
