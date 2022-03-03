@@ -7,7 +7,7 @@ import { CarritoContext } from './Context/CarritoProvedor';
 
 const ItemDetailContainer = (producto) => {
     const {productos} = useContext(CarritoContext);
-        console.log(productos)
+      
     const params = useParams()
  
 

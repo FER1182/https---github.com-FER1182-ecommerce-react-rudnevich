@@ -21,12 +21,13 @@ const agregarAlCarrito = (item,cantidad) => {
        let itemConQ ={
         itemDetalle:item,
         cantidad:cantidad}
-
+        
         
    
     setCarrito([...carrito,itemConQ])
-    
+    let subTotal= (item.precio * cantidad)
 }
+
 
 const eliminarDelCarrito = (itemId)=>{
     let newCarrito= carrito.filter((a)=> a.id !== itemId)

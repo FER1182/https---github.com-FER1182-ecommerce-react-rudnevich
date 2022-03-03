@@ -7,7 +7,7 @@ const ItemDetail = ({ datos, art}) => {
     
     const itemSeleccionado = datos.find(a=> a.id === art) 
         const [visible, setVisible] = useState(true)
-    console.log(itemSeleccionado)
+
     const agregarCompra = () => {
        
         setVisible(false);
@@ -19,7 +19,7 @@ const ItemDetail = ({ datos, art}) => {
 
             <div className="col-3">
                 <div className="card">
-                    <img src={itemSeleccionado.fotoUrl} className="card-img-top" style={{ height: 200  ,
+                    <img src={itemSeleccionado.pictureUrl} className="card-img-top" style={{ height: 200  ,
  width: 200}} alt="..." />
                     <div className="card-body">
                         <h6 className="card-title">art.{itemSeleccionado.id}</h6>

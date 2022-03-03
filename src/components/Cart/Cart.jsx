@@ -11,16 +11,16 @@ return (
     <div>
 
       {carrito.map((item) => 
-      <div class="card mb-3" style={{maxWidth: "540px"}} key={item.itemDetalle.id}>
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src={item.itemDetalle.pictureUrl} class="img-fluid rounded-start" alt="..."/>
+      <div className="card mb-3" style={{maxWidth: "540px"}} key={item.itemDetalle.id}>
+      <div className="row g-0">
+        <div className="col-md-4">
+          <img src={item.itemDetalle.pictureUrl} className="img-fluid rounded-start" alt="..."/>
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">art.{item.itemDetalle.id}</h5> 
-           
+        <div className="col-md-8">
+          <div className="card-body">
+            <h5 className="card-title">art.{item.itemDetalle.id}</h5> 
             <h5 className="card-description">$ {item.itemDetalle.price}</h5>
+            <h5 className="card-description"> cant. {item.cantidad}</h5>
           </div>
         </div>
       </div>

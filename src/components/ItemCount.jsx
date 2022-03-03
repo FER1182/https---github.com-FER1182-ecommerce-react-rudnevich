@@ -9,7 +9,7 @@ const ItemCount = ({ item,stock, initial}) => {
 
   const onAdd = () => setContador(contador + 1);
 
-    console.log(item)
+
   
   return <>
     <div className="container">
