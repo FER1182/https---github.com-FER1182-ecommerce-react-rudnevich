@@ -21,6 +21,8 @@ return (
             <h5 className="card-title">art.{item.itemDetalle.id}</h5> 
             <h5 className="card-description">$ {item.itemDetalle.price}</h5>
             <h5 className="card-description"> cant. {item.cantidad}</h5>
+            <h2 className="card-description"> subtotal $ {item.subTotal}</h2>
+            
           </div>
         </div>
       </div>

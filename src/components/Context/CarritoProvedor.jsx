@@ -17,15 +17,18 @@ const CarritoProvedor = ({children}) => {
 //funciones
 
 const agregarAlCarrito = (item,cantidad) => {
-
+    
+    let subTotal= (item.price * cantidad)
        let itemConQ ={
         itemDetalle:item,
-        cantidad:cantidad}
+        cantidad:cantidad,
+        subTotal:subTotal
+        }
         
         
    
     setCarrito([...carrito,itemConQ])
-    let subTotal= (item.precio * cantidad)
+    
 }
 
 
