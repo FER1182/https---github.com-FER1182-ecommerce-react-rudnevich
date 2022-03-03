@@ -9,6 +9,7 @@ const ItemCount = ({ item,stock, initial}) => {
 
   const onAdd = () => setContador(contador + 1);
 
+    console.log(item)
   
   return <>
     <div className="container">
@@ -25,7 +26,7 @@ const ItemCount = ({ item,stock, initial}) => {
           <button disabled={contador === stock ? true : false} onClick={onAdd}> +</button>
         </div>
 
-        <button  disabled={estaEnCarrito(item)}  onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button>
+        <button  disabled={estaEnCarrito(item.id)}  onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button>
       </div>
     </div>
 

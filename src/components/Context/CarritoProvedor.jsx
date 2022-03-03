@@ -37,8 +37,9 @@ const vaciarCarrito = () =>{
     setCarrito([]);
 }
 
-const estaEnCarrito = (item) =>{
-    return carrito.some((a)=> a.id === item.id)
+const estaEnCarrito = (productosId) =>{
+    
+    return carrito.some((a)=> a.itemDetalle.id === productosId)
 }
 
 
@@ -93,11 +94,11 @@ const productos = [
       categoria: "camisas"
     },
 ];
-console.log(productos)
+
 //estados
 const [carrito,setCarrito]=useState([]);
 
-
+console.log(carrito)
  
  
  //etc

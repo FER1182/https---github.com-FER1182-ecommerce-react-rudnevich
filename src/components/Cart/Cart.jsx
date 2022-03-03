@@ -5,26 +5,30 @@ import { CarritoContext } from '../Context/CarritoProvedor'
 
 
 const Cart = () => {
-  const { carrito } = useContext(CarritoContext);
+  const { carrito,eliminarDelCarrito } = useContext(CarritoContext);
 
 return (
     <div>
 
       {carrito.map((item) => 
-      
-      <div className="col-3" key={item.itemDetalle.datos.id}>
-      {console.log(item)}
-        <div className="card">
-          <img src={item.itemDetalle.datos.pictureUrl} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h6 className="card-title">art.{item.itemDetalle.datos.id}</h6>
-            <h5 className="card-title">{item.itemDetalle.datos.title}</h5>
-            <h5 className="card-description">$ {item.price}</h5>
-            
+      <div class="card mb-3" style={{maxWidth: "540px"}} key={item.itemDetalle.id}>
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src={item.itemDetalle.pictureUrl} class="img-fluid rounded-start" alt="..."/>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">art.{item.itemDetalle.id}</h5> 
+           
+            <h5 className="card-description">$ {item.itemDetalle.price}</h5>
           </div>
         </div>
+      </div>
+      <button onClick={()=>eliminarDelCarrito(item.itemDetalle.id)}>eliminar del carrito</button>
       </div>)}
-    </div>
+      </div>
+      
+    
   )
 }
 
