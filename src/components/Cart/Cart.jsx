@@ -14,12 +14,12 @@ return (
       <div className="card mb-3" style={{maxWidth: "540px"}} key={item.itemDetalle.id}>
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={item.itemDetalle.pictureUrl} className="img-fluid rounded-start" alt="..."/>
+          <img src={item.itemDetalle.img} className="img-fluid rounded-start" alt="..."/>
         </div>
         <div className="col-md-8">
           <div className="card-body">
-            <h5 className="card-title">art.{item.itemDetalle.id}</h5> 
-            <h5 className="card-description">$ {item.itemDetalle.price}</h5>
+            <h5 className="card-title">art.{item.itemDetalle.modelo}</h5> 
+            <h5 className="card-description">$ {item.itemDetalle.precio}</h5>
             <h5 className="card-description"> cant. {item.cantidad}</h5>
             <h2 className="card-description"> subtotal $ {item.subTotal}</h2>
             

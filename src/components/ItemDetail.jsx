@@ -19,12 +19,11 @@ const ItemDetail = ({ datos, art}) => {
 
             <div className="col-3">
                 <div className="card">
-                    <img src={itemSeleccionado.pictureUrl} className="card-img-top" style={{ height: 200  ,
- width: 200}} alt="..." />
+                    <img src={itemSeleccionado.img} className="card-img-top" style={{ }} alt="..." />
                     <div className="card-body">
-                        <h6 className="card-title">art.{itemSeleccionado.id}</h6>
-                        <h6 className="card-title">{itemSeleccionado.title}</h6>
-                        <h5 className="card-description">$ {itemSeleccionado.price}</h5>
+                        <h6 className="card-title">art.{itemSeleccionado.modelo}</h6>
+                        <h6 className="card-title">{itemSeleccionado.nombre}</h6>
+                        <h5 className="card-description">$ {itemSeleccionado.precio}</h5>
                         <div className="container">
                             <p>{itemSeleccionado.description}</p>
                         </div>
