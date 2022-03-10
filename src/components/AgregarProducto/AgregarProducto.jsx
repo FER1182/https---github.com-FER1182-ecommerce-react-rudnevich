@@ -3,7 +3,7 @@ import useFireStore from '../../hooks/useFireStore'
 
 const AgregarProducto = () => {
 
-    const {} = useFireStore(CarritoContext);  
+/*     const {} = useFireStore(CarritoContext);   */
 
     const [form, setForm] = useState({
         categoria: "",

@@ -7,11 +7,12 @@ import db from '../service/firebase'
 
 const useFireStore = () => {
 
-const putItem = async ({newProduct})=> {
+const generateOrder = async ({newTiket})=> {
 
   try {
-    const data = collection(db,"items");
-    const prod = await addDoc(data,newProduct);
+    const col = collection(db,"tikets");
+    const tiket = await addDoc(col,newTiket);
+    alert(`gracias por tu compra tu orden es la ${tiket.id}`)
 
 
     
@@ -23,7 +24,7 @@ const putItem = async ({newProduct})=> {
 
 
   return {
-    
+    generateOrder
   }
 }
 
