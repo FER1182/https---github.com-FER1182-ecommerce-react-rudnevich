@@ -6,6 +6,7 @@ import ItemListContainer from '../components/ItemListContainer'
 import ItemDetailContainer from '../components/ItemDetailContainer'
 import Footer from '../components/Footer/Footer'
 import Cart from '../components/Cart/Cart'
+import AgregarProducto from '../components/AgregarProducto/AgregarProducto'
 
 
 
@@ -20,6 +21,7 @@ const Rutas = () => {
                 <Route path="/category/:id" element={<ItemListContainer />} />
                 <Route path="/item/:id" element={<ItemDetailContainer />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/agregarProductos" element={<AgregarProducto/>} />
             </Routes>
             <Footer />
         </BrowserRouter>

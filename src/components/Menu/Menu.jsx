@@ -28,6 +28,8 @@ const Menu = () => {
             <Link className="nav-link active" style={styleMenu} to={"/"} >Home</Link>
             <Link className="nav-link" style={styleMenu} to={`/category/camisas`}>Camisas</Link>
             <Link className="nav-link" style={styleMenu} to={`/category/remeras`}>Remeras</Link>
+            <Link className="nav-link"  style={styleMenu}  to={`/agregarProductos`}>Agregar productos</Link>
+            
 
           </div>
         </div>
