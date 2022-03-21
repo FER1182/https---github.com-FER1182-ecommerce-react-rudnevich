@@ -1,6 +1,6 @@
-import React ,{useState} from 'react'
+import React ,{useState,useContext} from 'react'
 import useFireStore from '../../hooks/useFireStore'
-
+import { CarritoContext } from '../Context/CarritoProvedor'
 
 
 
@@ -8,6 +8,7 @@ import useFireStore from '../../hooks/useFireStore'
 
 const Checkout = ({carrito}) => {
 
+const { totalCarrito, vaciarCarrito } = useContext(CarritoContext);
 
 const [form,setForm]= useState({
 
@@ -17,11 +18,11 @@ const [form,setForm]= useState({
         email:"",
     },
     items:carrito,
-    total:1000,
-
-
+    total:totalCarrito(),
+    
     }
 )
+
 
 const {generateOrder}=useFireStore()
 
@@ -39,6 +40,7 @@ const handleChange = (e) => {
 const handleSubmit = (e) =>{
   e.preventDefault()
   generateOrder({newTiket:form})
+  vaciarCarrito()  
 }
 
     return (

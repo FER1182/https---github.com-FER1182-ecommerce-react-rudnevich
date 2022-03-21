@@ -1,4 +1,5 @@
-# Pagina para vender articulos
+# Pagina para vender articulos de todo tipo, que se conecta con la base de datos firestore y guarda los articulos
+
 
 ## 'app.js' direcciona al index, que ahi ubique todas las rutas.
 

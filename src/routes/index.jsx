@@ -21,7 +21,7 @@ const Rutas = () => {
                 <Route path="/category/:id" element={<ItemListContainer />} />
                 <Route path="/item/:id" element={<ItemDetailContainer />} />
                 <Route path="/cart" element={<Cart />} />
-               {/*  <Route path="/agregarProductos" element={<AgregarProducto/>} /> */}
+            
             </Routes>
             <Footer />
         </BrowserRouter>

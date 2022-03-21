@@ -12,7 +12,6 @@ const CarritoProvedor = ({children}) => {
 //funciones
 
 const agregarAlCarrito = (item,cantidad) => {
-    console.log(item)
     let subTotal= (item.precio * cantidad)
        let itemConQ ={
         itemDetalle:item,
@@ -20,6 +19,7 @@ const agregarAlCarrito = (item,cantidad) => {
         subTotal:subTotal
         }
     setCarrito([...carrito,itemConQ])
+    
 }
 
 
@@ -37,9 +37,14 @@ const estaEnCarrito = (productosId) =>{
     return carrito.some((a)=> a.itemDetalle.id === productosId)
 }
 
+const totalCarrito=()=>{
+    let total =0
+    if(carrito.length>0) total=carrito.map(item=>item.subTotal).reduce((a,b)=> a + b,0); 
+    return total 
+}
 
 //variables
-const [productos,setProductos]=useState([]);
+
 const getData = async () => {
   try {
       const data = collection(db, "items");//base de datos, y cual coleccion
@@ -58,10 +63,11 @@ useEffect(()=> {
 
 //estados
 const [carrito,setCarrito]=useState([]);
+const [productos,setProductos]=useState([]);
 
  //en clase del 21 febrero  
     return (
-    <CarritoContext.Provider value={{agregarAlCarrito,carrito,vaciarCarrito,estaEnCarrito,eliminarDelCarrito,productos}}>
+    <CarritoContext.Provider value={{agregarAlCarrito,carrito,vaciarCarrito,estaEnCarrito,eliminarDelCarrito,productos,totalCarrito}}>
         {children} {/* a quein provees la info */}
         
     </CarritoContext.Provider>
