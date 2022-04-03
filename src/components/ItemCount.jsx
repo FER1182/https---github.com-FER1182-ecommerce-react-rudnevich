@@ -16,17 +16,16 @@ const ItemCount = ({ item,stock, initial}) => {
       <div className="row">
 
         <div className="col">
-          {contador > 1 && <button onClick={() => setContador(contador - 1)}> - </button>}
+          <button type="button" className="btn btn-secondary" disabled={contador >1 ? false : true} onClick={() => setContador(contador - 1)}> - </button>
         </div>
         <div className="col">
-          <p>{contador}</p>
+          <p style={{ fontSize: "1.5rem" }}>{contador}</p>
 
         </div>
         <div className="col">
-          <button disabled={contador === stock ? true : false} onClick={onAdd}> +</button>
+          <button type="button" className="btn btn-secondary" disabled={contador === stock ? true : false} onClick={onAdd}> +</button>
         </div>
-
-        <button  disabled={estaEnCarrito(item.id)}  onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button>
+         <button onClick={()=>agregarAlCarrito(item,contador)} className="btn btn-success">Agregar a Carrito</button> 
       </div>
     </div>
 
