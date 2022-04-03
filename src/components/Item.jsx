@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Item = ({ item }) => {
 
     return (
-        <div className="col-3">
+        <div className="col">
             <div className="card">
                 <img src={item.img} className="card-img-top" alt="..." />
                 <div className="card-body">
